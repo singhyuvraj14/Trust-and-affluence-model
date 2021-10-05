@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <title>Final Score</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <style>
+        h1{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: large;
+            color: white;
+            font-size: 45px;
+            text-align: center;
+        }
+        p{
+            font-family: sans-serif;
+            font-size: 60px;
+            color: white;
+            text-align: center;
+        }
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Trust and Affluence Score is</h1>
+    <p>{{mess}}/1100</p>
+    <a href="{% url 'test' %}" class="btn1">Recheck Your Score</a>
+</body>
+</html>

@@ -1,0 +1,106 @@
+{% load static %}
+{% if all %}
+<script>
+    alert('{{ all }}') ;
+</script>
+{% endif %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="{%static 'info.css' %}">
+</head>
+
+<body>
+    <div class="col-sm-6 offset-3">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <div class="dashboard-widget-header">
+                            <div class="row">
+                                <h5 class="m-0 ml-3">User Information</h5>
+                            </div>
+                        </div>
+                        <div class="wrapper-form-money-transfer">
+                            <div class="col-sm-12 text-center">
+                                <img src="{% static 'images/pp.png'%}" style="width:30%;">
+                            </div>
+                            <form action="/trust/score/" method="post">
+                                {% csrf_token %}
+                                <div class="row m-1 mb-3">
+                                    <div class="col-sm-6">
+                                        <label for="form-control">Full Name</label>
+                                        <input type="text" class="form-control" name="name" placeholder="Enter Name" required>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="form-control">Loan Amount</label>
+                                        <input type="text" class="form-control" name="loan" placeholder="Enter Amount-0 if Not Applicable" required>
+                                    </div>
+                                </div>
+                                <div class="row m-1 mb-3">
+                                    <div class="col-sm-6">
+                                        <label for="form-control">Loan Term</label>
+                                        <input type="text" class="form-control" name="term"
+                                            placeholder="Enter No of months-0 if Not Applicable" required>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="form-control">Monthly Income</label>
+                                        <input type="text" class="form-control" name="income" placeholder="Enter Income" required>
+                                    </div>
+                                </div>
+                                <div class="row m-1 mb-3">
+                                    <div class="col-sm-6">
+                                        <label for="form-control">Employement Status</label>
+                                        <select id="employ" class="form-control" name="status" required>
+                                            <option selected disabled>Choose Option</option>
+                                            <option value=1>Yes, Employed</option>
+                                            <option value=0>No, Not employed</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="form-control">Are you a homeowner?</label>
+                                        <select name="home" id="homo" class="form-control" name="home" required>
+                                            <option selected disabled>Choose Option</option>
+                                            <option value=1>Yes</option>
+                                            <option value=0>No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row m-1 mb-3">
+                                    <div class="col-sm-6">
+                                        <label for="form-control">Access to social media?</label>
+                                        <select id="social" class="form-control" name="access" required>
+                                            <option selected disabled>Choose Option</option>
+                                            <option value=1>Yes</option>
+                                            <option value=0>No</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="form-control">Twitter Username</label>
+                                        <input type="text" class="form-control" name="username"
+                                            placeholder="Enter Username-input NA if Not Applicable" required>
+                                    </div>
+                                </div>
+                                <div class="row m-1 mb-3">
+                                    <div class="col-sm-12 text-center">
+                                        <button class="btn1">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
