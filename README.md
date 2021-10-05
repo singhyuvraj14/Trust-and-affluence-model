@@ -1,5 +1,5 @@
 Less than 10% Indians have a credit bureau presence, so it is essential to identify and utilize
-alternate forms of data to assess customers’s credit worthiness. We want to identify markers from social media data that indicate trust and affluence;
+alternate forms of data to assess customer’s credit worthiness. We want to identify markers from social media data that indicate trust and affluence;
 
 Our results provide a new insight to improve risk control for lending in India On one hand, individuals in India do not have a well-verified credit score, such as FICO score, which enlarges the information asymmetry in Indian lending markets. On the other hand, about 90% of internet users in India have a social media account.
 
